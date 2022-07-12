@@ -1,0 +1,47 @@
+.bs{
+    width: 80%;
+    margin: 1.5%;
+}
+
+body{
+
+    background-color: white;
+    height: 100vh;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.display {
+    height: 50%;
+}
+
+h5 {
+    margin-left: 1.5%;
+}
+
+.input {
+    width: 80%;
+}
+
+.input_div {
+    margin: 1.5%;
+    padding: 0 2% 0 2%;
+    width: 80%;
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 5px;
+}
+
+.underlined {
+    width: 80%;
+    margin: 3% 1.5% ;
+    border-bottom: 3px solid rgb(90, 90, 90);
+}
