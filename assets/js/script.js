@@ -149,7 +149,7 @@ function weatherAPIcall(city) {
                             <p>${short_date}</p>
                             <img src="${img_url}" alt="${sky}">
                             <p>Temp: ${temp} °F</p>
-                            <p>Wind: ${wind}</p>
+                            <p>Wind: ${wind} MPH</p>
                             <p>Humidity: ${humid}%</p>
                         </div>
                     </div>`
