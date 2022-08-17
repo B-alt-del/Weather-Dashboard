@@ -2,19 +2,6 @@ var key = "cf8752859f31ac5d2b20710ebc12b322";
 var citiesArray = [];
 var $cityContainerEl = $("#cityContainer");
 
-//Format for day  ----------  change using our methods
-// function FormatDay(date) {
-//     var date = new Date();
-//     // console.log(date);
-//     var month = date.getMonth() + 1;
-//     var day = date.getDate();
-    
-//     var dayOutput = date.getFullYear() + '/' +
-//     (month < 10 ? '0' : '') + month + '/' +
-//     (day < 10 ? '0' : '') + day;
-//     return dayOutput;
-// }
-
 function start() {
     var cities_stored = JSON.parse(localStorage.getItem("cities"));
     if (cities_stored !== null) {
@@ -67,7 +54,7 @@ function weatherAPIcall(city) {
     }).then(function (data) {
 
 
-        console.log(data.dt)
+        console.log(data)
         var img = '';
         var skies = data.weather[0].main;
         var $imgEl = $('#skies');
@@ -89,6 +76,8 @@ function weatherAPIcall(city) {
             img = 'https://img.icons8.com/color/48/000000/summer.png';
         } else if (skies === "Rain") {
             img = 'https://img.icons8.com/color/48/000000/rain.png';
+        }else if (skies === "Thunderstorm"){
+            img = 'https://img.icons8.com/color/48/000000/storm-with-heavy-rain.png';
         }
 
         $imgEl.attr("src", img)
@@ -122,7 +111,6 @@ function weatherAPIcall(city) {
 
         });
 
-        //Api to get 5-day forecast  
         $.ajax({
             url: API_url3,
             method: "GET"
@@ -151,6 +139,8 @@ function weatherAPIcall(city) {
                         img_url = 'https://img.icons8.com/color/48/000000/summer.png';
                     } else if (sky === "Rain") {
                         img_url = 'https://img.icons8.com/color/48/000000/rain.png';
+                    }else if (sky === "Thunderstorm"){
+                        img_url = 'https://img.icons8.com/color/48/000000/storm-with-heavy-rain.png';
                     }
                    
                 card_data.innerHTML += `
