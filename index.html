@@ -1,100 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>Weather Dashboard</title>
-
 </head>
-<body>
 
+<body>
     <nav>
         <div class="nav-wrapper 1976d2 blue darken-2">
             <a href="#" class="brand-logo center">Weather Dashboard</a>
         </div>
     </nav>
 
-    <div class = "row flex">
-
+    <div class="row flex">
         <div class="col s3">
-
             <div>
                 <h5>Search for a City:</h5>
             </div>
-
-            <div class = "input_div" >
-                <input id = "user_input" class = "input" type="text" placeholder="Type City here...">
+            <div class="input_div">
+                <input id="user_input" class="input" type="text" placeholder="Type City here...">
             </div>
-
             <div>
-                <a class="waves-effect waves-light btn 64b5f6 blue lighten-2 bs">Search</a>
+                <a class="waves-effect waves-light btn 64b5f6 blue lighten-2 bs" id="searchCity">Search</a>
             </div>
-
             <div class="underlined"></div>
-
-            <div>
+            <div id="cityContainer">
                 <a class="waves-effect waves-light btn bs">Austin</a>
             </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">Chicago</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs ">New York</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">Orlando</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">San Francisco</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">Seattle</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">Denver</a>
-            </div>
-
-            <div>
-                <a class="waves-effect waves-light btn bs">Atlanta</a>
-            </div>
-        
         </div>
 
-        <div class="col s9 main">    
-
+        <div class="col s9 main">
             <div class="row display">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem unde, eaque nihil, fugiat ut est, accusantium minus a et voluptatibus tenetur itaque odit quae ipsam dolorum id velit laboriosam? Laudantium?
+                <div class="card">
+                    <div id="weather" class="card-body">
+                        <h5 id="currentCity">Search City For Weather</h5>
+                        <img id="skies" src="" alt="">
+                        <h6 id="currentTemp"></h6>
+                        <h6 id="currentHumid"></h6>
+                        <h6 id="currentWind"></h6>
+                        <h6 id="currentUV"></h6>
+                    </div>
+                </div>
             </div>
-
-            <div class="row forecast">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem unde, eaque nihil, fugiat ut est, accusantium minus a et voluptatibus tenetur itaque odit quae ipsam dolorum id velit laboriosam? Laudantium?
+            <div class="row">
+                <h4>5 Day Forecast</h4>
+                <div id="forecast">
+                </div>
             </div>
-
         </div>
 
-
-    </div>
-
-
-
-
-
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="assets/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
+
 </html>
